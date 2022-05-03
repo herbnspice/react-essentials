@@ -7,8 +7,8 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function AppTwo(){
-  return <h1>
-    TEst
+  return <h1 style={{ textAlign : 'center'}}>
+    App Two Fragments
   </h1>
 }
 root.render( 
