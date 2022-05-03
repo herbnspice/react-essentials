@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { BrowserRouter as Router } from 'react-router-dom';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function AppTwo(){
@@ -12,10 +14,10 @@ function AppTwo(){
   </h1>
 }
 root.render( 
-<>
-   <App/>
-   <AppTwo />
-   </>
+  <Router>
+    <App/>
+    <AppTwo />
+  </Router>
   );
 
 // If you want to start measuring performance in your app, pass a function

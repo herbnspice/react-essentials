@@ -1,6 +1,8 @@
 import React, { useEffect, useReducer, useState } from "react"
 import EssentialsState from './EssentialsState'
 import EssentialsReducer from './EssentialsReducer'
+import { Routes, Route  } from "react-router-dom";
+import { Home, About, Events, Contact, Whoops404, CompanyHistory, Services, Location } from "./page";
 import './App.css';
 
 function Header( props ){
@@ -54,6 +56,18 @@ function App() {
       <EssentialsReducer />
       <Footer year={new Date().getFullYear() }/>
       { user ? user.login : <p> User Found </p> }
+      <Routes>
+          <Route  path="/" element={<Home />}/>
+          <Route path="/about" element={<About />} >
+            <Route path="history" element={<CompanyHistory /> } />
+            <Route path="services" element={<Services /> } />
+            <Route path="location" element={<Location /> } />
+          </Route>
+          <Route path="/events" element={<Events />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Whoops404 />} />
+          
+      </Routes>
     </div>
   );
 }

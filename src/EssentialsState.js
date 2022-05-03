@@ -15,13 +15,13 @@ function EssentialsState( ){
 
     return (
         <>
-        <button onClick={() => setEmotion('Sad')}> Frustrate </button>
-        <button onClick={() => setEmotion('Happy')}> Happy </button>
-        <button onClick={() => setEmotion('Meh')}> Meh </button>
-        <p> The urrent user is {emotion} and {emotionS} using useState </p>
+            <button onClick={() => setEmotion('Sad')}> Frustrate </button>
+            <button onClick={() => setEmotion('Happy')}> Happy </button>
+            <button onClick={() => setEmotion('Meh')}> Meh </button>
+            <p> The urrent user is {emotion} and {emotionS} using useState </p>
 
-        <button onClick={() => setEmotionS('tired')}> tired </button>
-        <button onClick={() => setEmotionS('Mesh')}> Meh </button>
+            <button onClick={() => setEmotionS('tired')}> tired </button>
+            <button onClick={() => setEmotionS('Mesh')}> Meh </button>
         </>
     )
 }
